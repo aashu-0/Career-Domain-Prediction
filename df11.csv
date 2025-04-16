@@ -1,0 +1,178 @@
+age,gender,state,city,studying_yr,department,course_outside_curriculum,cgpa,work_style,family_influence,higher_studies,career_counseling_exp,preferred_career_domains,avg_technical_rating,avg_skill_rating,avg_carrer_choice_rating
+20,Male,Uttar Pradesh,Metro City,2,Mechanical,No,8.55,Mixed,No,Maybe,No,IT/Tech,2.4,3.3,4.1
+19,Male,Maharashtra,Metro City,2,Mechanical,Yes,8.55,Mixed,No,No,No,Startups/Innovation,2.2,3.3,4.5
+19,Male,Rajasthan,Tier 2 City,2,Metallurgy,No,7.8,Mixed,No,No,No,IT/Tech,2.2,3.0,3.8
+20,Male,Uttar Pradesh,Metro City,2,Electrical,Yes,9.25,Mixed,No,No,Yes,IT/Tech,2.8,3.6,4.8
+20,Male,Uttar Pradesh,Rural,2,Mechanical,Yes,8.55,Independent,No,No,No,IT/Tech,2.8,3.0,3.9
+21,Male,Bihar,Tier 3 City,4,Electronics,Yes,10.0,Mixed,Yes,Yes,No,Government/Public Sector,1.4,4.3,5.0
+22,Male,Rajasthan,Metro City,4,Chemical,Yes,6.75,Mixed,Yes,No,No,IT/Tech,4.4,5.0,5.0
+21,Male,Bihar,Rural,3,Electronics,No,8.55,Mixed,No,No,No,Government/Public Sector,1.4,1.9,4.4
+21,Male,Madhya Pradesh,Tier 3 City,3,Electrical,No,8.55,Mixed,Maybe,Maybe,No,Government/Public Sector,1.2,3.9,3.8
+20,Male,Rajasthan,Metro City,2,Mechanical,Yes,8.55,Independent,Maybe,Maybe,No,IT/Tech,3.8,3.4,4.9
+21,Male,Maharashtra,Rural,3,Computer Science,Yes,8.55,Mixed,No,Maybe,No,IT/Tech,2.0,2.1,3.1
+20,Male,Telangana,Tier 2 City,3,Mechanical,No,6.75,Mixed,No,Maybe,No,Creative Arts/Design,2.2,3.3,4.8
+21,Male,Chhattisgarh,Tier 3 City,3,Computer Science,Yes,8.55,Independent,No,Maybe,No,Creative Arts/Design,1.8,3.1,4.0
+20,Male,Rajasthan,Tier 2 City,2,Mechanical,No,6.75,Mixed,Maybe,Maybe,No,Academia/Education,2.0,3.4,3.4
+19,Male,West Bengal,Rural,2,Mechanical,Maybe,5.5,Mixed,No,Yes,No,IT/Tech,3.8,3.9,4.4
+20,Male,Rajasthan,Tier 2 City,2,Mechanical,No,8.55,Independent,No,No,No,Engineering/Manufacturing,1.4,3.6,4.0
+19,Male,Rajasthan,Metro City,2,Mechanical,No,7.8,Mixed,Yes,Maybe,No,Government/Public Sector,2.8,2.6,3.9
+19,Male,Maharashtra,Metro City,2,Mechanical,Yes,8.55,Mixed,No,Maybe,No,Startups/Innovation,2.8,2.7,4.1
+19,Female,Rajasthan,Metro City,2,Mechanical,Yes,6.75,Team,No,No,No,Engineering/Manufacturing,1.4,1.7,4.9
+21,Male,Rajasthan,Tier 2 City,2,Mechanical,No,8.55,Mixed,Yes,Maybe,No,Engineering/Manufacturing,2.0,2.7,4.1
+20,Male,Rajasthan,Metro City,2,Mechanical,No,8.55,Mixed,Maybe,No,No,Engineering/Manufacturing,2.6,4.0,4.0
+19,Female,Rajasthan,Tier 2 City,2,Mechanical,No,7.8,Mixed,No,Maybe,No,Government/Public Sector,2.0,3.6,4.0
+21,Male,Uttar Pradesh,Tier 2 City,2,Mechanical,Yes,6.75,Mixed,No,No,No,Startups/Innovation,3.4,3.7,4.5
+21,Male,West Bengal,Tier 2 City,2,Mechanical,Yes,7.8,Independent,No,No,No,Government/Public Sector,2.4,3.3,4.1
+21,Male,Jammu & Kashmir,Tier 3 City,3,Computer Science,No,9.25,Team,No,No,No,IT/Tech,2.8,4.4,4.8
+21,Male,Uttar Pradesh,Tier 3 City,2,Artificial Intelligence and Related,Maybe,6.75,Independent,Yes,Maybe,No,IT/Tech,3.2,3.0,3.6
+20,Male,Rajasthan,Metro City,2,Electrical,Yes,7.8,Independent,No,Yes,No,Finance/Banking,1.8,3.6,3.5
+20,Male,Rajasthan,Rural,2,Electronics,Maybe,6.75,Mixed,Maybe,No,No,IT/Tech,2.6,3.1,3.5
+20,Male,Rajasthan,Rural,2,Electrical,No,8.55,Independent,No,No,No,IT/Tech,1.4,2.3,3.0
+20,Male,Rajasthan,Metro City,2,Electronics,Yes,9.25,Mixed,No,Maybe,No,Engineering/Manufacturing,3.2,3.6,4.4
+21,Male,Rajasthan,Rural,2,Computer Science,No,5.5,Team,No,No,No,IT/Tech,1.6,2.6,4.0
+20,Male,Uttar Pradesh,Tier 3 City,1,Mechanical,Yes,9.25,Independent,No,Maybe,No,Government/Public Sector,2.4,4.0,5.0
+19,Male,Andhra Pradesh,Tier 2 City,2,Electronics,Maybe,6.75,Independent,Maybe,Maybe,No,IT/Tech,2.4,2.1,5.0
+18,Female,Bihar,Tier 2 City,1,Mechanical,No,6.75,Mixed,No,No,No,Engineering/Manufacturing,1.6,2.9,5.0
+19,Female,Rajasthan,Tier 2 City,2,Computer Science,No,9.25,Independent,No,No,No,Creative Arts/Design,3.0,4.3,4.5
+19,Female,Uttar Pradesh,Tier 2 City,1,Mechanical,Maybe,7.8,Independent,Yes,No,Yes,IT/Tech,1.6,3.7,4.4
+21,Male,Rajasthan,Tier 2 City,3,Chemical,Yes,6.75,Team,Maybe,Yes,No,IT/Tech,2.4,3.3,5.0
+20,Male,Rajasthan,Rural,3,Mechanical,Yes,9.25,Team,Yes,No,No,Government/Public Sector,2.6,4.0,4.6
+20,Male,Rajasthan,Metro City,2,Metallurgy,Yes,8.55,Mixed,Maybe,No,No,Government/Public Sector,1.8,4.4,4.5
+18,Female,Punjab,Tier 2 City,1,Metallurgy,No,5.5,Independent,Yes,Maybe,No,Others,1.0,2.1,4.0
+19,Male,Rajasthan,Tier 2 City,1,Electrical,Yes,7.8,Mixed,No,No,No,Engineering/Manufacturing,1.8,3.0,4.4
+20,Female,Bihar,Tier 3 City,3,Electronics,Yes,8.55,Independent,Maybe,No,Yes,IT/Tech,3.2,4.3,4.6
+17,Male,Rajasthan,Rural,1,Electrical,No,7.8,Mixed,Yes,No,No,IT/Tech,1.4,1.3,4.2
+21,Male,Rajasthan,Metro City,4,Chemical,Yes,8.55,Mixed,Yes,No,No,IT/Tech,3.4,4.7,5.0
+22,Male,Bihar,Tier 3 City,1,Mechanical,Yes,5.5,Mixed,No,No,Yes,Startups/Innovation,1.8,2.7,4.6
+20,Male,Rajasthan,Tier 2 City,2,Metallurgy,Yes,6.75,Team,No,No,No,IT/Tech,2.0,3.0,3.9
+18,Male,Rajasthan,Tier 2 City,1,Electrical,Yes,6.75,Mixed,No,No,No,Engineering/Manufacturing,1.6,1.6,4.8
+22,Male,Rajasthan,Tier 3 City,4,Metallurgy,Yes,7.8,Mixed,No,Yes,No,Engineering/Manufacturing,2.0,3.6,3.6
+21,Male,Madhya Pradesh,Tier 2 City,3,Metallurgy,Yes,6.75,Mixed,Maybe,Maybe,No,IT/Tech,2.0,4.4,3.9
+21,Male,Rajasthan,Metro City,4,Electrical,Yes,8.55,Mixed,Maybe,Yes,No,IT/Tech,2.6,3.4,3.9
+21,Female,Uttar Pradesh,Tier 2 City,4,Electronics,Yes,9.25,Mixed,No,Yes,No,IT/Tech,1.8,4.6,4.5
+19,Male,Madhya Pradesh,Metro City,1,Electrical,Yes,8.55,Team,Maybe,Maybe,No,IT/Tech,2.6,3.1,4.2
+22,Male,Rajasthan,Tier 3 City,4,Mechanical,Yes,9.25,Team,No,No,Yes,Engineering/Manufacturing,2.2,3.1,3.4
+19,Male,Rajasthan,Tier 2 City,1,Mechanical,Maybe,8.55,Team,No,Yes,Yes,Engineering/Manufacturing,1.4,3.1,5.0
+18,Female,Kerala,Tier 2 City,1,Computer Science,Yes,8.55,Mixed,Yes,Maybe,No,IT/Tech,2.0,3.4,4.1
+18,Female,Karnataka,Tier 2 City,1,Computer Science,Yes,9.25,Mixed,No,Maybe,Yes,IT/Tech,1.8,4.9,3.9
+23,Male,Kerala,Tier 3 City,4,Architecture,No,6.75,Mixed,Maybe,Yes,No,Engineering/Manufacturing,2.4,3.1,4.0
+19,Male,Rajasthan,Rural,1,Chemical,Yes,6.75,Mixed,Maybe,No,No,Startups/Innovation,2.0,4.6,3.1
+21,Female,Rajasthan,Metro City,3,Metallurgy,Yes,8.55,Mixed,No,No,No,IT/Tech,1.6,4.1,3.9
+22,Female,Rajasthan,Metro City,4,Computer Science,Yes,8.55,Team,No,No,No,IT/Tech,2.4,3.7,4.0
+22,Male,Madhya Pradesh,Tier 2 City,3,Metallurgy,Yes,8.55,Mixed,No,No,No,Engineering/Manufacturing,1.6,3.0,3.5
+21,Male,Delhi,Metro City,4,Computer Science,No,6.75,Mixed,No,Yes,No,IT/Tech,4.4,4.6,4.0
+21,Male,Rajasthan,Rural,4,Computer Science,No,6.75,Team,No,No,No,Government/Public Sector,3.2,4.1,4.6
+21,Male,Uttar Pradesh,Tier 3 City,4,Chemical,Yes,8.55,Mixed,No,Maybe,No,Finance/Banking,3.2,4.6,4.4
+21,Male,Madhya Pradesh,Tier 3 City,3,Electrical,No,5.5,Team,No,Maybe,No,IT/Tech,1.0,2.0,4.0
+18,Male,Assam,Metro City,1,Chemical,Maybe,8.55,Independent,No,No,No,IT/Tech,1.0,4.4,4.4
+21,Male,Rajasthan,Tier 3 City,3,Electronics,No,6.75,Independent,Yes,No,No,Startups/Innovation,1.4,3.1,2.8
+22,Male,Gujarat,Metro City,4,Computer Science,Yes,10.0,Team,No,Maybe,No,IT/Tech,3.0,4.1,4.4
+18,Male,Uttar Pradesh,Metro City,1,Civil,Yes,9.25,Mixed,No,Yes,No,Government/Public Sector,2.0,3.6,3.6
+21,Male,Bihar,Tier 2 City,4,Civil,No,8.55,Mixed,Yes,No,Yes,Government/Public Sector,3.8,4.0,4.6
+21,Male,Rajasthan,Tier 3 City,3,Architecture,Yes,6.75,Mixed,No,Maybe,Yes,Others,4.0,4.9,4.5
+22,Female,Uttar Pradesh,Tier 2 City,4,Mechanical,No,7.8,Mixed,No,Maybe,No,Engineering/Manufacturing,2.0,4.7,4.0
+17,Female,Gujarat,Tier 3 City,1,Computer Science,No,9.25,Mixed,No,No,No,Startups/Innovation,1.8,1.7,5.0
+20,Male,Rajasthan,Rural,4,Civil,No,7.8,Mixed,No,Maybe,No,Engineering/Manufacturing,2.4,4.4,4.2
+19,Female,Rajasthan,Metro City,3,Electronics,Yes,8.55,Independent,Maybe,No,No,IT/Tech,2.4,2.4,3.5
+18,Female,Bihar,Tier 3 City,1,Artificial Intelligence and Related,No,6.75,Independent,Maybe,No,No,IT/Tech,1.2,1.3,4.6
+21,Male,Delhi,Metro City,4,Computer Science,Yes,5.5,Team,No,Yes,No,Startups/Innovation,3.6,3.4,3.4
+22,Male,Rajasthan,Tier 3 City,4,Computer Science,No,8.55,Mixed,No,Yes,Yes,Startups/Innovation,4.0,4.9,4.2
+23,Male,Uttarakhand,Tier 2 City,4,Mechanical,Yes,7.8,Team,No,Yes,No,Government/Public Sector,1.2,2.0,4.2
+20,Male,Rajasthan,Rural,3,Electrical,Yes,8.55,Mixed,No,Maybe,Yes,Startups/Innovation,3.4,4.4,4.2
+19,Male,Andhra Pradesh,Rural,3,Electronics,No,6.75,Mixed,No,Yes,No,Government/Public Sector,1.2,3.3,2.8
+19,Male,Uttar Pradesh,Tier 3 City,1,Mechanical,Maybe,8.55,Mixed,No,No,No,IT/Tech,2.4,3.4,4.2
+18,Male,Madhya Pradesh,Tier 3 City,1,Mechanical,No,7.8,Independent,No,Yes,Yes,Engineering/Manufacturing,2.6,3.0,3.6
+20,Male,Uttar Pradesh,Rural,3,Civil,No,6.75,Independent,Maybe,Maybe,No,Government/Public Sector,1.6,2.9,2.9
+21,Female,Rajasthan,Metro City,4,Metallurgy,Yes,5.5,Independent,No,Maybe,No,IT/Tech,2.0,3.1,4.6
+21,Male,Rajasthan,Metro City,3,Chemical,Yes,8.55,Mixed,No,No,No,Engineering/Manufacturing,1.4,3.3,4.2
+30,Female,Rajasthan,Rural,2,Electronics,Yes,8.55,Independent,No,Yes,No,Academia/Education,1.2,2.1,3.9
+18,Male,Rajasthan,Metro City,3,Electrical,No,6.75,Mixed,No,Maybe,No,Government/Public Sector,1.2,2.6,4.4
+19,Male,Rajasthan,Tier 2 City,2,Electronics,Yes,6.75,Independent,No,Maybe,No,IT/Tech,1.2,2.1,4.1
+21,Male,Uttar Pradesh,Tier 2 City,3,Chemical,Yes,5.5,Mixed,No,Maybe,No,Startups/Innovation,3.4,4.0,3.5
+19,Male,Rajasthan,Metro City,1,Chemical,No,6.75,Team,No,Maybe,No,Finance/Banking,1.2,2.6,3.9
+22,Female,Rajasthan,Metro City,4,Mechanical,Yes,8.55,Mixed,No,Yes,No,IT/Tech,3.4,4.7,1.1
+17,Male,Rajasthan,Metro City,1,Mechanical,Yes,9.25,Mixed,No,Maybe,No,IT/Tech,2.2,2.7,3.9
+21,Female,Rajasthan,Tier 2 City,4,Metallurgy,Maybe,5.5,Mixed,Yes,Yes,Yes,Academia/Education,2.6,3.4,3.8
+19,Male,Uttar Pradesh,Tier 3 City,1,Civil,Maybe,7.8,Independent,No,Maybe,Yes,IT/Tech,2.6,3.0,3.6
+19,Male,Rajasthan,Rural,4,Civil,Maybe,6.75,Mixed,Maybe,Maybe,No,Engineering/Manufacturing,1.8,3.0,3.1
+21,Male,Bihar,Tier 2 City,3,Computer Science,No,8.55,Mixed,No,No,No,IT/Tech,3.2,4.7,5.0
+18,Female,Andhra Pradesh,Metro City,1,Mechanical,No,6.75,Independent,Maybe,Maybe,No,Engineering/Manufacturing,1.2,3.0,4.5
+18,Male,Telangana,Tier 2 City,1,Computer Science,No,8.55,Mixed,Maybe,No,No,IT/Tech,1.8,2.9,4.8
+20,Male,Rajasthan,Tier 3 City,3,Mechanical,Yes,6.75,Mixed,Maybe,Maybe,Yes,Others,3.2,3.3,3.4
+21,Male,Madhya Pradesh,Tier 3 City,2,Artificial Intelligence and Related,Yes,8.55,Independent,No,No,Yes,IT/Tech,2.2,3.3,4.0
+20,Female,Chhattisgarh,Tier 3 City,3,Computer Science,Yes,8.55,Mixed,No,No,No,IT/Tech,2.8,3.9,4.4
+21,Female,Maharashtra,Tier 2 City,3,Mechanical,Yes,7.8,Mixed,Maybe,Yes,Yes,Startups/Innovation,1.8,3.4,4.9
+20,Male,Rajasthan,Tier 2 City,2,Electronics,Yes,8.55,Mixed,No,No,No,IT/Tech,1.4,1.3,4.9
+22,Female,Kerala,Metro City,4,Computer Science,Yes,5.5,Team,Maybe,Yes,No,Finance/Banking,2.4,4.7,4.6
+19,Male,Rajasthan,Rural,1,Electronics,No,8.55,Mixed,No,No,No,Startups/Innovation,2.4,3.7,4.6
+21,Male,Madhya Pradesh,Rural,3,Mechanical,No,9.25,Independent,No,No,No,Others,2.2,2.4,3.0
+21,Male,Rajasthan,Metro City,3,Civil,No,7.8,Mixed,Maybe,No,No,Startups/Innovation,2.4,3.1,4.6
+18,Male,Rajasthan,Rural,1,Mechanical,No,6.75,Mixed,No,No,No,Government/Public Sector,2.0,4.0,2.5
+21,Male,Maharashtra,Rural,3,Computer Science,No,6.75,Mixed,No,No,Yes,IT/Tech,1.0,1.0,4.6
+18,Male,Rajasthan,Metro City,1,Artificial Intelligence and Related,No,6.75,Mixed,Yes,Maybe,Yes,IT/Tech,1.8,3.4,4.5
+19,Female,Rajasthan,Metro City,1,Architecture,Yes,8.55,Independent,No,Yes,No,Startups/Innovation,1.8,4.0,4.2
+23,Male,Rajasthan,Metro City,4,Electrical,No,8.55,Mixed,Maybe,Maybe,No,Government/Public Sector,2.0,3.4,4.0
+22,Male,Rajasthan,Metro City,4,Computer Science,No,8.55,Mixed,Yes,Maybe,No,IT/Tech,2.2,3.0,3.9
+20,Male,Rajasthan,Tier 3 City,1,Chemical,Maybe,5.5,Independent,No,No,No,Government/Public Sector,1.2,2.1,3.8
+19,Male,Rajasthan,Metro City,1,Chemical,No,5.5,Mixed,Yes,Maybe,No,Engineering/Manufacturing,1.8,3.4,5.0
+18,Male,Gujarat,Tier 3 City,1,Civil,Yes,9.25,Mixed,No,No,Yes,Engineering/Manufacturing,1.0,2.9,5.0
+21,Male,Rajasthan,Rural,3,Electronics,Yes,7.8,Team,No,No,No,IT/Tech,2.4,3.7,4.2
+22,Female,Rajasthan,Rural,4,Electronics,No,6.75,Independent,No,No,No,Startups/Innovation,2.0,4.4,4.4
+18,Female,West Bengal,Tier 2 City,1,Chemical,Yes,5.5,Mixed,Maybe,Yes,No,Academia/Education,1.8,2.9,4.0
+18,Male,Andhra Pradesh,Tier 2 City,1,Mechanical,Yes,8.55,Mixed,No,Maybe,No,Startups/Innovation,2.4,3.9,4.6
+18,Male,Uttar Pradesh,Tier 2 City,1,Metallurgy,No,5.5,Mixed,Yes,Maybe,No,Others,1.0,1.4,4.8
+21,Female,Uttarakhand,Tier 3 City,2,Electronics,Yes,7.8,Independent,No,Yes,No,IT/Tech,2.6,4.6,4.0
+20,Female,Punjab,Tier 3 City,2,Computer Science,No,9.25,Mixed,No,No,No,IT/Tech,2.4,2.7,3.8
+17,Male,Uttar Pradesh,Metro City,1,Mechanical,Yes,6.75,Independent,Yes,Yes,No,Engineering/Manufacturing,3.6,3.9,4.0
+22,Male,Maharashtra,Metro City,4,Mechanical,Yes,6.75,Mixed,Maybe,Yes,Yes,Engineering/Manufacturing,2.6,2.7,4.2
+19,Male,Haryana,Tier 2 City,2,Civil,No,7.8,Mixed,Yes,No,No,Government/Public Sector,1.2,3.1,4.6
+20,Male,Jharkhand,Tier 3 City,3,Electrical,Yes,6.75,Mixed,No,No,No,IT/Tech,2.8,4.6,4.5
+22,Female,Rajasthan,Tier 2 City,4,Computer Science,Yes,7.8,Team,Maybe,No,No,IT/Tech,2.6,4.3,3.4
+20,Male,Uttar Pradesh,Metro City,2,Electrical,No,5.5,Independent,No,No,No,IT/Tech,1.4,2.4,5.0
+19,Male,Rajasthan,Tier 2 City,1,Electronics,No,8.55,Independent,No,No,No,Government/Public Sector,1.6,3.3,4.0
+18,Male,Gujarat,Tier 2 City,1,Electronics,Maybe,6.75,Independent,No,Maybe,No,Engineering/Manufacturing,2.8,2.9,4.1
+20,Male,Rajasthan,Tier 2 City,2,Civil,No,6.75,Mixed,Yes,Maybe,No,Others,1.2,2.9,4.1
+20,Male,Uttar Pradesh,Tier 2 City,2,Civil,Yes,8.55,Mixed,No,No,No,IT/Tech,1.4,3.1,3.9
+19,Male,Madhya Pradesh,Tier 2 City,1,Electrical,No,8.55,Independent,No,No,No,Engineering/Manufacturing,1.2,2.9,3.6
+19,Female,Rajasthan,Rural,1,Electronics,No,7.8,Mixed,Maybe,Maybe,No,IT/Tech,1.6,2.3,5.0
+19,Female,Rajasthan,Metro City,1,Mechanical,No,6.75,Team,No,Maybe,No,Startups/Innovation,1.8,3.6,4.8
+23,Male,Rajasthan,Metro City,4,Metallurgy,No,5.5,Mixed,No,No,No,IT/Tech,2.8,4.6,4.6
+20,Male,Madhya Pradesh,Tier 2 City,3,Architecture,Yes,9.25,Mixed,No,No,No,Others,1.8,3.7,4.6
+20,Male,Rajasthan,Rural,2,Mechanical,Yes,6.75,Mixed,No,Maybe,No,Government/Public Sector,3.0,2.7,5.0
+20,Male,Uttar Pradesh,Rural,2,Electrical,Maybe,8.55,Independent,Maybe,Maybe,No,Engineering/Manufacturing,1.2,3.0,4.5
+21,Female,Gujarat,Metro City,4,Biomedical ,Yes,8.55,Independent,Yes,Maybe,No,Others,2.6,2.6,4.0
+20,Male,Delhi,Metro City,2,Electronics,No,8.55,Mixed,No,No,No,Engineering/Manufacturing,1.8,2.6,4.2
+20,Male,Bihar,Rural,2,Civil,Yes,5.5,Team,No,Maybe,No,Startups/Innovation,3.0,3.1,3.9
+18,Male,Uttarakhand,Rural,1,Mechanical,No,10.0,Independent,Yes,No,No,Engineering/Manufacturing,1.2,2.7,4.1
+19,Female,Maharashtra,Metro City,1,Computer Science,Yes,6.75,Mixed,Maybe,Maybe,No,Finance/Banking,2.0,2.9,4.2
+20,Male,Rajasthan,Tier 2 City,2,Mechanical,Yes,6.75,Mixed,Yes,Maybe,No,Government/Public Sector,2.6,3.0,4.0
+21,Female,Jharkhand,Tier 3 City,2,Mechanical,Yes,7.8,Mixed,No,No,No,Engineering/Manufacturing,1.6,2.3,2.8
+20,Male,Rajasthan,Rural,2,Mechanical,Maybe,5.5,Mixed,Yes,Maybe,Yes,Creative Arts/Design,2.0,1.9,4.9
+18,Male,Rajasthan,Tier 3 City,2,Mechanical,No,8.55,Independent,Maybe,Yes,Yes,Academia/Education,3.4,4.1,3.9
+21,Male,Uttar Pradesh,Tier 2 City,2,Mechanical,No,6.75,Mixed,No,No,No,Startups/Innovation,2.8,4.0,4.6
+19,Female,Rajasthan,Rural,2,Mechanical,Yes,7.8,Mixed,No,No,No,Engineering/Manufacturing,1.6,3.0,4.1
+20,Female,Kerala,Tier 2 City,2,Mechanical,Yes,6.75,Mixed,No,Yes,Yes,Engineering/Manufacturing,1.4,4.1,3.4
+21,Male,Jharkhand,Tier 3 City,2,Mechanical,No,6.75,Independent,No,No,No,Finance/Banking,1.4,1.7,3.4
+19,Female,Rajasthan,Tier 2 City,2,Electronics,No,6.75,Mixed,Maybe,No,No,Engineering/Manufacturing,1.2,2.9,2.9
+18,Female,Rajasthan,Rural,2,Artificial Intelligence and Related,No,7.8,Mixed,No,Maybe,No,Creative Arts/Design,2.0,2.4,3.9
+21,Male,Rajasthan,Rural,2,Artificial Intelligence and Related,No,8.55,Mixed,No,Maybe,No,IT/Tech,1.8,3.0,4.1
+18,Female,Maharashtra,Metro City,1,Mechanical,No,5.5,Mixed,Maybe,Maybe,No,Creative Arts/Design,1.2,4.0,4.6
+20,Female,Uttar Pradesh,Tier 2 City,2,Mechanical,No,7.8,Mixed,No,No,No,IT/Tech,1.8,2.4,3.9
+20,Male,Bihar,Tier 3 City,2,Mechanical,No,6.75,Independent,Maybe,No,No,Creative Arts/Design,1.4,2.7,4.2
+21,Male,Rajasthan,Metro City,2,Mechanical,No,6.75,Team,No,No,No,Engineering/Manufacturing,1.6,2.1,3.6
+20,Male,Uttar Pradesh,Tier 2 City,2,Mechanical,No,7.8,Independent,No,No,No,Finance/Banking,1.6,3.3,5.0
+20,Male,Rajasthan,Tier 3 City,2,Mechanical,Yes,9.25,Mixed,No,No,No,Engineering/Manufacturing,2.8,2.7,5.0
+19,Male,Uttar Pradesh,Tier 3 City,2,Mechanical,Yes,10.0,Independent,No,Maybe,No,Academia/Education,2.0,3.9,3.8
+22,Male,Maharashtra,Metro City,2,Mechanical,No,8.55,Team,Yes,Yes,Yes,Government/Public Sector,2.6,2.4,4.4
+19,Male,Haryana,Metro City,2,Chemical,No,8.55,Team,No,No,No,Engineering/Manufacturing,1.4,4.0,4.1
+20,Male,Uttar Pradesh,Tier 2 City,2,Civil,Yes,8.55,Mixed,No,No,No,IT/Tech,3.4,3.1,3.4
+19,Male,Uttar Pradesh,Rural,2,Chemical,No,6.75,Independent,No,No,No,Government/Public Sector,3.6,2.6,3.2
+19,Male,Rajasthan,Tier 2 City,2,Chemical,Yes,6.75,Mixed,Yes,Maybe,Yes,Finance/Banking,3.6,3.9,5.0
+18,Male,Rajasthan,Tier 3 City,1,Computer Science,Maybe,10.0,Mixed,Maybe,No,No,Government/Public Sector,2.2,2.9,4.2
+19,Male,Rajasthan,Tier 2 City,3,Mechanical,Yes,7.8,Mixed,No,Maybe,No,Startups/Innovation,3.2,3.4,4.8
+19,Male,Uttar Pradesh,Metro City,2,Electrical,Maybe,6.75,Team,Maybe,Yes,No,Engineering/Manufacturing,2.0,2.0,2.0
+20,Male,Rajasthan,Tier 2 City,2,Artificial Intelligence and Related,Maybe,9.25,Independent,No,Maybe,No,IT/Tech,2.0,3.0,3.9
+19,Male,Rajasthan,Tier 2 City,2,Artificial Intelligence and Related,Maybe,8.55,Mixed,No,Maybe,No,IT/Tech,3.2,3.0,4.2
+20,Male,Rajasthan,Rural,2,Artificial Intelligence and Related,No,7.8,Team,No,Maybe,No,IT/Tech,1.6,3.1,3.6
+18,Female,Uttar Pradesh,Metro City,2,Mechanical,No,7.8,Mixed,No,No,Yes,Government/Public Sector,2.0,2.1,4.4
+19,Male,Haryana,Tier 2 City,2,Civil,No,7.8,Independent,Yes,No,No,Government/Public Sector,1.2,4.0,4.5
