@@ -5,20 +5,19 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler, OrdinalEncoder
 from sklearn.compose import ColumnTransformer
-from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
+from sklearn.model_selection import train_test_split
 from sklearn.decomposition import PCA
 from sklearn.pipeline import Pipeline
 from imblearn.over_sampling import SMOTE
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from xgboost import XGBClassifier
 from catboost import CatBoostClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
-import joblib
 import plotly.express as px
 import plotly.graph_objects as go
-from PIL import Image
 
 # Set page configuration
 st.set_page_config(
@@ -233,28 +232,63 @@ def model_training():
     st.subheader("Select Model")
     model_option = st.selectbox(
         "Choose a classification algorithm",
-        ["Random Forest", "Gradient Boosting", "CatBoostClassifier", "Decision Tree", "Logistic Regression", "Multi Layer Perceptron"]
+        ["Random Forest", "XGBoost", "CatBoost", "Logistic Regression", "Neural Network (MLP)", "k-Nearest Neighbors"]
     )
     
     # Model training
     if st.button("Train Model"):
         with st.spinner(f"Training {model_option} model..."):
             if model_option == "Random Forest":
-                model = RandomForestClassifier(class_weight='balanced', random_state=123)
-            elif model_option == "Gradient Boosting":
-                model = GradientBoostingClassifier(random_state=123)
-            elif model_option == "CatBoostClassifier":
-                model = CatBoostClassifier(iterations=1000,learning_rate=0.05,depth=6,
-                                           loss_function='MultiClass',eval_metric='Accuracy',verbose=100,
-                                           random_seed=123)
-            elif model_option == "Decision Tree":
-                model = DecisionTreeClassifier(class_weight='balanced',random_state=123)
-            elif model_option == "Multi Layer Perceptron":
-                model = MLPClassifier(hidden_layer_sizes=(100,50), activation='relu',
-                                      solver='adam',learning_rate='adaptive',max_iter=1000,
-                                      early_stopping=True, random_state=123)
+                model = RandomForestClassifier(
+                    n_estimators=100,
+                    max_depth=10,
+                    min_samples_split=5,
+                    min_samples_leaf=2,
+                    class_weight='balanced',
+                    random_state=123
+                )
+            elif model_option == "XGBoost":
+                model = XGBClassifier(
+                    n_estimators=1000,
+                    learning_rate=0.05,
+                    max_depth=6,
+                    subsample=0.8,
+                    colsample_bytree=0.8,
+                    random_state=123
+                )
+            elif model_option == "CatBoost":
+                model = CatBoostClassifier(
+                    iterations=1000,
+                    learning_rate=0.05,
+                    depth=6,
+                    loss_function='MultiClass',
+                    eval_metric='Accuracy',
+                    random_seed=123,
+                    verbose=0
+                )
+            elif model_option == "Logistic Regression":
+                model = LogisticRegression(
+                    multi_class='multinomial',
+                    solver='lbfgs',
+                    C=1.0,
+                    max_iter=1000,
+                    random_state=123
+                )
+            elif model_option == "Neural Network (MLP)":
+                model = MLPClassifier(
+                    hidden_layer_sizes=(64,32),
+                    learning_rate='adaptive',
+                    max_iter=2000,
+                    random_state=123
+                )
             else:
-                model = LogisticRegression(multi_class='multinomial', max_iter=1000, random_state=123)
+                model = KNeighborsClassifier(
+                    n_neighbors=5,
+                    weights='distance',
+                    algorithm='auto',
+                    leaf_size=30,
+                    p=2  # Euclidean distance
+                )
             
             # Train the model
             model.fit(X_train, y_train)
@@ -267,10 +301,12 @@ def model_training():
             
             # Calculate metrics
             accuracy = accuracy_score(y_test, y_pred)
-            report = classification_report(y_test, y_pred, target_names=class_names, 
-                                           labels=np.unique(y_test),  # Ensure only labels present in y_test are used,
-                                           output_dict=True)
-            cm = confusion_matrix(y_test, y_pred, labels=np.unique(y_test))
+            unique_classes = np.unique(y_test)
+            filtered_class_names = [class_names[i] for i in unique_classes]
+
+            report = classification_report(y_test, y_pred, target_names=filtered_class_names,
+                                           labels=unique_classes, output_dict=True, zero_division=0)
+            cm = confusion_matrix(y_test, y_pred, labels=unique_classes)
             
             # Save metrics
             st.session_state.model_metrics = {
@@ -299,18 +335,18 @@ def model_training():
         class_names = st.session_state.model_metrics['class_names']
         
         unique_classes = np.unique(y_test)
+        filtered_class_names = [class_names[i] for i in unique_classes]
         fig = px.imshow(
             cm,
             labels=dict(x="Predicted", y="True"),
-            x=[class_names[i] for i in unique_classes],
-            y=[class_names[i] for i in unique_classes],
+            x=filtered_class_names,
+            y=filtered_class_names,
             text_auto=True,
-            title="Confusion Matrix"
-        )
+            title="Confusion Matrix")
         st.plotly_chart(fig, use_container_width=True)
         
         # Feature importance for tree-based models
-        if model_option in ["Random Forest", "Gradient Boosting","CatBoostClassifier", "Decision Tree"]:
+        if model_option in ["Random Forest", "XGBoost", "CatBoost"]:
             st.subheader("Feature Importance")
             
             # Get feature names
