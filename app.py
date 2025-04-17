@@ -11,8 +11,8 @@ from sklearn.pipeline import Pipeline
 from imblearn.over_sampling import SMOTE
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
+from catboost import CatBoostClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 import joblib
@@ -233,7 +233,7 @@ def model_training():
     st.subheader("Select Model")
     model_option = st.selectbox(
         "Choose a classification algorithm",
-        ["Random Forest", "Gradient Boosting", "Support Vector Machine", "Decision Tree", "Logistic Regression", "Multi Layer Perceptron"]
+        ["Random Forest", "Gradient Boosting", "CatBoostClassifier", "Decision Tree", "Logistic Regression", "Multi Layer Perceptron"]
     )
     
     # Model training
@@ -243,12 +243,14 @@ def model_training():
                 model = RandomForestClassifier(class_weight='balanced', random_state=123)
             elif model_option == "Gradient Boosting":
                 model = GradientBoostingClassifier(random_state=123)
-            elif model_option == "Support Vector Machine":
-                model = SVC(probability=True, random_state=123)
+            elif model_option == "CatBoostClassifier":
+                model = CatBoostClassifier(iterations=1000,learning_rate=0.05,depth=6,
+                                           loss_function='MultiClass',eval_metric='Accuracy',verbose=100,
+                                           random_seed=123)
             elif model_option == "Decision Tree":
                 model = DecisionTreeClassifier(class_weight='balanced',random_state=123)
             elif model_option == "Multi Layer Perceptron":
-                model = MLPClassifier(hidden_layer_sizes=(64,32), activation='relu',
+                model = MLPClassifier(hidden_layer_sizes=(100,50), activation='relu',
                                       solver='adam',learning_rate='adaptive',max_iter=1000,
                                       early_stopping=True, random_state=123)
             else:
@@ -265,8 +267,10 @@ def model_training():
             
             # Calculate metrics
             accuracy = accuracy_score(y_test, y_pred)
-            report = classification_report(y_test, y_pred, target_names=class_names, output_dict=True)
-            cm = confusion_matrix(y_test, y_pred)
+            report = classification_report(y_test, y_pred, target_names=class_names, 
+                                           labels=np.unique(y_test),  # Ensure only labels present in y_test are used,
+                                           output_dict=True)
+            cm = confusion_matrix(y_test, y_pred, labels=np.unique(y_test))
             
             # Save metrics
             st.session_state.model_metrics = {
@@ -294,18 +298,19 @@ def model_training():
         cm = st.session_state.model_metrics['cm']
         class_names = st.session_state.model_metrics['class_names']
         
+        unique_classes = np.unique(y_test)
         fig = px.imshow(
             cm,
             labels=dict(x="Predicted", y="True"),
-            x=class_names,
-            y=class_names,
+            x=[class_names[i] for i in unique_classes],
+            y=[class_names[i] for i in unique_classes],
             text_auto=True,
             title="Confusion Matrix"
         )
         st.plotly_chart(fig, use_container_width=True)
         
         # Feature importance for tree-based models
-        if model_option in ["Random Forest", "Gradient Boosting", "Decision Tree"]:
+        if model_option in ["Random Forest", "Gradient Boosting","CatBoostClassifier", "Decision Tree"]:
             st.subheader("Feature Importance")
             
             # Get feature names

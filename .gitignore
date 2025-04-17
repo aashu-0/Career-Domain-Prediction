@@ -6,3 +6,6 @@ aienv/
 
 .DS_Store
 .env
+*.tsv
+*.json
+*.tfevents
