@@ -76,7 +76,7 @@ st.sidebar.markdown(
         }
     </style>
     <div class="footer">
-         Vibe Coded with ❤️ by <a href="https://github.com/aashu-0" target="_blank">aashu-0</a>
+         by <a href="https://github.com/aashu-0" target="_blank">aashu-0</a>
     </div>
     """,
     unsafe_allow_html=True
