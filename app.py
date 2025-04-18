@@ -249,11 +249,12 @@ def model_training():
                 )
             elif model_option == "XGBoost":
                 model = XGBClassifier(
-                    n_estimators=1000,
-                    learning_rate=0.05,
-                    max_depth=6,
+                    n_estimators=100,
+                    learning_rate=0.1,
+                    max_depth=4,
                     subsample=0.8,
                     colsample_bytree=0.8,
+                    tree_method='hist',
                     random_state=123
                 )
             elif model_option == "CatBoost":
