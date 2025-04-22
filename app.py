@@ -61,33 +61,33 @@ def main():
         make_predictions()
     
     # Add footer to the bottom-left corner of the sidebar
-st.sidebar.markdown(
-    """
-    <style>
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            text-align: left;
-            padding: 10px;
-            font-size: 12px;
-            color: #888;
-        }
-    </style>
-    <div class="footer">
-         by <a href="https://github.com/aashu-0" target="_blank">aashu-0</a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+    st.sidebar.markdown(
+        """
+        <style>
+            .footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: left;
+                padding: 10px;
+                font-size: 12px;
+                color: #888;
+            }
+        </style>
+        <div class="footer">
+             <p>If this guess is wrong, blame the dataset not me.</p>
+             <p>Made with 💻 by <a href="https://github.com/aashu-0" target="_blank" style="color: #007acc; text-decoration: none;">@aashu-0</a></p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     
 def data_exploration():
     st.header("Data Exploration")
     
     df = load_data()
     
-
     # Display raw data
     st.subheader("Collected Data")
     st.dataframe(df.head())
@@ -249,7 +249,7 @@ def model_training():
                 )
             elif model_option == "XGBoost":
                 model = XGBClassifier(
-                    n_estimators=100,
+                    n_estimators=300,
                     learning_rate=0.1,
                     max_depth=4,
                     subsample=0.8,
@@ -259,8 +259,8 @@ def model_training():
                 )
             elif model_option == "CatBoost":
                 model = CatBoostClassifier(
-                    iterations=1000,
-                    learning_rate=0.05,
+                    iterations=300,
+                    learning_rate=0.1,
                     depth=6,
                     loss_function='MultiClass',
                     eval_metric='Accuracy',
@@ -279,7 +279,7 @@ def model_training():
                 model = MLPClassifier(
                     hidden_layer_sizes=(64,32),
                     learning_rate='adaptive',
-                    max_iter=2000,
+                    max_iter=500,
                     random_state=123
                 )
             else:
@@ -400,16 +400,79 @@ def make_predictions():
         studying_yr = st.number_input("Year of Study", min_value=1, max_value=5, value=2)
         department = st.selectbox("Department", df['department'].unique())
         course_outside = st.selectbox("Course Outside Curriculum", ["Yes", "No", "Maybe"])
-    
-    with col2:
-        cgpa = st.slider("CGPA", min_value=5.5, max_value=10.0, value=8.0, step=0.25)
         work_style = st.selectbox("Work Style", df['work_style'].unique())
         family_influence = st.selectbox("Family Influence", ["Yes", "No", "Maybe"])
         higher_studies = st.selectbox("Higher Studies", ["Yes", "No", "Maybe"])
         career_counseling = st.selectbox("Career Counseling Experience", ["Yes", "No"])
-        technical_rating = st.slider("Technical Rating (1-5)", min_value=1.0, max_value=5.0, value=2.5, step=0.2)
-        skill_rating = st.slider("Skill Rating (1-5)", min_value=1.0, max_value=5.0, value=3.0, step=0.2)
-        career_choice_rating = st.slider("Career Choice Rating (1-5)", min_value=1.0, max_value=5.0, value=4.0, step=0.2)
+        cgpa = st.slider("CGPA", min_value=5.5, max_value=10.0, value=8.0, step=0.25)
+    
+    # Technical Skills Section
+    st.subheader("Technical Expertise (Rate on scale 1-5)")
+    st.markdown("1 = Kuch nahi aata, 5 = God level")
+    
+    col_tech1, col_tech2 = st.columns(2)
+    
+    with col_tech1:
+        coding_rating = st.slider("Coding", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+        design_rating = st.slider("Design", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+        marketing_rating = st.slider("Marketing", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+    
+    with col_tech2:
+        finance_rating = st.slider("Finance", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+        tech_writing_rating = st.slider("Technical Writing", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+    
+    # Calculate average technical rating
+    technical_rating = (coding_rating + design_rating + marketing_rating + finance_rating + tech_writing_rating) / 5
+    
+    # Skill Rating Section
+    st.subheader("Rate your proficiency in the following areas (Scale 1-5)")
+    st.markdown("1 = Kuch nahi aata, 5 = God level")
+    
+    col_skill1, col_skill2 = st.columns(2)
+    
+    with col_skill1:
+        problem_solving = st.slider("Problem Solving", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+        communication = st.slider("Communication Skills", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+        team_collaboration = st.slider("Team Collaboration", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+    
+    with col_skill2:
+        leadership = st.slider("Leadership", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+        time_management = st.slider("Time Management", min_value=1.0, max_value=5.0, value=3.0, step=0.1)
+    
+    # Calculate average skill rating
+    skill_rating = (problem_solving + communication + team_collaboration + leadership + time_management) / 5
+    
+    # Career Choice Factors Section
+    st.subheader("Rate Career Choice Factors")
+    st.markdown("1 = Who cares?, 5 = Zaroori hai!")
+    
+    col_career1, col_career2 = st.columns(2)
+    
+    with col_career1:
+        salary_rating = st.slider("Salary Package", min_value=1.0, max_value=5.0, value=4.0, step=0.1)
+        work_life_balance = st.slider("Work-Life Balance", min_value=1.0, max_value=5.0, value=4.0, step=0.1)
+        job_security = st.slider("Job Security", min_value=1.0, max_value=5.0, value=4.0, step=0.1)
+        learning_opp = st.slider("Learning Opportunities", min_value=1.0, max_value=5.0, value=4.0, step=0.1)
+    
+    with col_career2:
+        company_reputation = st.slider("Company Reputation", min_value=1.0, max_value=5.0, value=4.0, step=0.1)
+        location = st.slider("Location", min_value=1.0, max_value=5.0, value=4.0, step=0.1)
+        role = st.slider("Role/Position", min_value=1.0, max_value=5.0, value=4.0, step=0.1)
+        work_impact = st.slider("Work Impact", min_value=1.0, max_value=5.0, value=4.0, step=0.1)
+    
+    # Calculate average career choice rating
+    career_choice_rating = (salary_rating + work_life_balance + job_security + learning_opp + 
+                           company_reputation + location + role + work_impact) / 8
+    
+    # Display average ratings
+    st.subheader("Average Ratings")
+    col_avg1, col_avg2, col_avg3 = st.columns(3)
+    with col_avg1:
+        st.metric("Average Technical Rating", f"{technical_rating:.2f}")
+    with col_avg2:
+        st.metric("Average Skill Rating", f"{skill_rating:.2f}")
+    with col_avg3:
+        st.metric("Average Career Choice Rating", f"{career_choice_rating:.2f}")
     
     # Create a DataFrame for the input data
     input_data = pd.DataFrame({
