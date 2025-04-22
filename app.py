@@ -248,15 +248,11 @@ def model_training():
                     random_state=123
                 )
             elif model_option == "XGBoost":
-                model = XGBClassifier(
-                    n_estimators=300,
-                    learning_rate=0.1,
-                    max_depth=4,
-                    subsample=0.8,
-                    colsample_bytree=0.8,
-                    tree_method='hist',
-                    random_state=123
-                )
+                import joblib
+                model = joblib.load("xgboost/xgboost_model.pkl")
+                st.session_state.le = joblib.load("xgboost/label_encoder.pkl")
+                st.session_state.ct = joblib.load("xgboost/column_transformer.pkl")
+                st.success("Loaded pre-trained XGBoost model.")
             elif model_option == "CatBoost":
                 model = CatBoostClassifier(
                     iterations=300,
