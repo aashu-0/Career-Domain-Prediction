@@ -237,7 +237,7 @@ def model_training():
     
     # Model training
     if st.button("Train Model"):
-        with st.spinner(f"Training {model_option} model..."):
+        with st.spinner(f"Training or Loading {model_option} model..."):
             if model_option == "Random Forest":
                 model = RandomForestClassifier(
                     n_estimators=100,
@@ -253,6 +253,11 @@ def model_training():
                 st.session_state.le = joblib.load("xgboost/label_encoder.pkl")
                 st.session_state.ct = joblib.load("xgboost/column_transformer.pkl")
                 st.success("Loaded pre-trained XGBoost model.")
+                # Load metrics
+                metrics = joblib.load("xgboost/xgboost_metrics.pkl")
+                st.session_state.model_metrics = metrics
+                st.success(f"Model training completed with accuracy: {metrics['accuracy']:.4f}")
+            
             elif model_option == "CatBoost":
                 model = CatBoostClassifier(
                     iterations=300,
@@ -287,33 +292,34 @@ def model_training():
                     p=2  # Euclidean distance
                 )
             
-            # Train the model
-            model.fit(X_train, y_train)
-            
-            # Save the trained model
-            st.session_state.trained_model = model
-            
-            # Make predictions on test set
-            y_pred = model.predict(X_test)
-            
-            # Calculate metrics
-            accuracy = accuracy_score(y_test, y_pred)
-            unique_classes = np.unique(y_test)
-            filtered_class_names = [class_names[i] for i in unique_classes]
+            if model_option is not "XGBoost":
+                # Train the model
+                model.fit(X_train, y_train)
+                
+                # Save the trained model
+                st.session_state.trained_model = model
+                
+                # Make predictions on test set
+                y_pred = model.predict(X_test)
+                
+                # Calculate metrics
+                accuracy = accuracy_score(y_test, y_pred)
+                unique_classes = np.unique(y_test)
+                filtered_class_names = [class_names[i] for i in unique_classes]
 
-            report = classification_report(y_test, y_pred, target_names=filtered_class_names,
-                                           labels=unique_classes, output_dict=True, zero_division=0)
-            cm = confusion_matrix(y_test, y_pred, labels=unique_classes)
-            
-            # Save metrics
-            st.session_state.model_metrics = {
-                "accuracy": accuracy,
-                "report": report,
-                "cm": cm,
-                "class_names": class_names
-            }
-            
-            st.success(f"Model training completed with accuracy: {accuracy:.2f}")
+                report = classification_report(y_test, y_pred, target_names=filtered_class_names,
+                                            labels=unique_classes, output_dict=True, zero_division=0)
+                cm = confusion_matrix(y_test, y_pred, labels=unique_classes)
+                
+                # Save metrics
+                st.session_state.model_metrics = {
+                    "accuracy": accuracy,
+                    "report": report,
+                    "cm": cm,
+                    "class_names": class_names
+                }
+                
+                st.success(f"Model training completed with accuracy: {accuracy:.2f}")
     
     # Display metrics if model has been trained
     if st.session_state.trained_model is not None:
@@ -331,13 +337,15 @@ def model_training():
         cm = st.session_state.model_metrics['cm']
         class_names = st.session_state.model_metrics['class_names']
         
-        unique_classes = np.unique(y_test)
-        filtered_class_names = [class_names[i] for i in unique_classes]
+        # unique_classes = np.unique(y_test)
+        # filtered_class_names = [class_names[i] for i in unique_classes]
+        label_count = cm.shape[0]
+        class_labels = class_names[:label_count]
         fig = px.imshow(
             cm,
             labels=dict(x="Predicted", y="True"),
-            x=filtered_class_names,
-            y=filtered_class_names,
+            x=class_labels,
+            y=class_labels,
             text_auto=True,
             title="Confusion Matrix")
         st.plotly_chart(fig, use_container_width=True)
